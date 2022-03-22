@@ -1,0 +1,14 @@
+{
+    "name": "Minds.so",
+    "short_name": "Minds.so",
+    "start_url": "/",
+    "display": "minimal-ui",
+    "icons": [
+        {
+            "src": "./logo.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        }
+    ],
+    "theme_color": "#967C6E"
+}
