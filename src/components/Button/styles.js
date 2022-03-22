@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Brown } from "../../theme";
+import { Brown, BrownAccent } from "../../theme";
 
 const Style = styled.button`
   display: flex;
@@ -17,6 +17,7 @@ const Style = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  transition: 0.24s;
 
   /* Optimisation for icons  */
   svg {
@@ -27,7 +28,7 @@ const Style = styled.button`
   }
 
   &:hover {
-    background: ${Brown}aa;
+    background: ${BrownAccent};
   }
 `;
 
