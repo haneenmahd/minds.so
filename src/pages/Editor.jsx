@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../components/Container";
 import Nav from "../components/Nav";
+import Body from "../components/Body";
 import Heading from "../components/Heading";
 import QuickAction from "../components/QuickAction";
 
@@ -12,6 +13,10 @@ export default function Editor() {
 
         <QuickAction>Preview Word</QuickAction>
       </Nav>
+
+      <Body>
+        
+      </Body>
     </Container>
   );
 }
