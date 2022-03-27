@@ -4,6 +4,7 @@ import { Brown } from "../../theme";
 const Style = styled.textarea`
   font-size: 4vmax;
   text-align: center;
+  background: none;
   border: none;
   color: ${Brown};
   font-weight: 500;
