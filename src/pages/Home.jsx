@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import { ChevronRight } from "react-feather";
 import { Skin } from "../theme";
 import Illustration from "../assets/illustration.svg";
-import { css } from "@emotion/react";
 
 function Home() {
   return (
