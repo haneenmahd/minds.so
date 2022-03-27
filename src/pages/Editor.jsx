@@ -7,10 +7,12 @@ import Body from "../components/Body/styles";
 import Heading from "../components/Heading";
 import QuickAction from "../components/QuickAction";
 import QuoteInput from "../components/QuoteInput";
+import AuthorInput from "../components/AuthorInput";
 
 const EditorBody = styled(Body)`
   min-height: calc(100vh - 130px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
@@ -27,7 +29,8 @@ export default function Editor() {
       </Nav>
 
       <EditorBody>
-        <QuoteInput margin="0" />
+        <QuoteInput margin="0" padding="0" />
+        <AuthorInput margin="0" padding="0" />
       </EditorBody>
     </Container>
   );
