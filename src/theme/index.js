@@ -11,3 +11,7 @@ export const Title = "#212121";
 export const Icon = "#7A7A7A";
 
 export const BrownAccent = "#a08678";
+
+export const Text = "#b68585";
+
+export const TextBold = "#806455";
