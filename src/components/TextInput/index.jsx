@@ -7,14 +7,12 @@ export default function TextInput({
     margin = "10px 0",
     placeholder = "Your Text Input",
     size = "15px",
-    defaultValue = ""
 }) {
   return (
     <Style
         padding={padding}
         margin={margin}
         placeholder={placeholder}
-        defaultValue={defaultValue}
         size={size}
         type="text" 
         width={width} />
