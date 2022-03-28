@@ -19,7 +19,7 @@ function Home() {
       }}
     >
       <Container margin="0 0 40px 0" padding="0">
-        <Heading weight="900">Minds.so</Heading>
+        <Heading size="3vmax" weight="900">Minds.so</Heading>
       </Container>
 
       <img height={350} src={Illustration} alt="Main Illustration" />
