@@ -2,6 +2,7 @@ import Container from "../components/Container";
 import Heading from "../components/Heading";
 import Description from "../components/Description";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import { Skin } from "../theme";
 import Illustration from "../assets/illustration.svg";
@@ -19,7 +20,9 @@ function Home() {
       }}
     >
       <Container margin="0 0 40px 0" padding="0">
-        <Heading size="3vmax" weight="900">Minds.so</Heading>
+        <Heading size="3vmax" weight="900">
+          Minds.so
+        </Heading>
       </Container>
 
       <img height={350} src={Illustration} alt="Main Illustration" />
@@ -32,13 +35,16 @@ function Home() {
           feel like reading from a book
         </Description>
 
-        <Button style={{
-          width: "100%"
-        }}>
-          Create yours
-
-          <ChevronRight />
-        </Button>
+        <Link to="/editor">
+          <Button
+            style={{
+              width: "100%",
+            }}
+          >
+            Create yours
+            <ChevronRight />
+          </Button>
+        </Link>
       </Container>
     </Container>
   );
