@@ -1,3 +1,5 @@
+import { css } from "@emotion/react";
+
 export const Skin = "#FAF0EA";
 
 export const Brown = "#967C6E";
@@ -15,3 +17,5 @@ export const BrownAccent = "#a08678";
 export const Text = "#b68585";
 
 export const TextBold = "#806455";
+
+export const TransitionEase = "0.5s ease";
