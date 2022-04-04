@@ -1,27 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import Style, { QuoteCanvas } from './styles'
-import html2canvas from "html2canvas"
+import renderToImage from '../../utils/renderToImage';
+import Style, { QuoteImage } from './styles'
 
 export default function PreviewExport({
     active,
-    renderInputElement
+    targetRenderInputElement
 }) {
-  const renderToCanvas = async (element) => {
-    const renderedCanvas = await html2canvas(element, {
-      backgroundColor: '#111'
-    });
+  const [imageData, setImageData] = useState("");
 
-    let previewQuoteCanvas = document.getElementById("preview-quote-canvas");
-
-    previewQuoteCanvas.appendChild(renderedCanvas);
-  }
+  useEffect(async () => {
+    try {
+      await renderToImage(targetRenderInputElement, setImageData);
+    } catch (error) {
+      console.error(error);
+    }
+  })
 
   return (
     ReactDOM.createPortal(
         <Style active={active}>
-          <QuoteCanvas id="preview-quote-canvas" onLoad={async() => await renderToCanvas(renderInputElement)}>
-          </QuoteCanvas>
+          <QuoteImage src={imageData} />
         </Style>,
         document.getElementById("modal-root")
     )

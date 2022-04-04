@@ -10,9 +10,10 @@ const Active = css`
 const Style = styled.div`
   position: absolute;
   top: -400%; left: 0%;
-  height: 500px; width: 80vmin;
+  height: auto; width: 80vmin;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 10px;
+  max-height: 80vh;
   background-color: #fff;
   border: 0.7px solid #939393;
   border-radius: 8px;
@@ -22,9 +23,11 @@ const Style = styled.div`
   ${(p) => p.active && Active}
 `;
 
-const QuoteCanvas = styled.canvas`
-
+const QuoteImage = styled.img`
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
 `;
 
-export { QuoteCanvas };
+export { QuoteImage };
 export default Style;

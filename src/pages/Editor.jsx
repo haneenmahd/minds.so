@@ -39,12 +39,12 @@ export default function Editor() {
         <QuickAction action={() => setPreviewOpen(!previewOpen)}> <Play/> Preview</QuickAction>
       </Nav>
 
-      <EditorBody>
+      <EditorBody id="quote-input">
         <QuoteInput margin="0" padding="0" />
         <AuthorInput margin="0" padding="0" />
       </EditorBody>
 
-      <PreviewExport active={previewOpen}>
+      <PreviewExport targetRenderInputElement={document.getElementById("quote-input")} active={previewOpen}>
         <Heading>
           A Preview of the Export Card
         </Heading>
