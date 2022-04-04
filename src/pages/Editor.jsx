@@ -8,6 +8,8 @@ import Heading from "../components/Heading";
 import QuickAction from "../components/QuickAction";
 import QuoteInput from "../components/QuoteInput";
 import AuthorInput from "../components/AuthorInput";
+import { Link, Outlet } from "react-router-dom";
+import { Play } from "react-feather";
 
 const EditorBody = styled(Body)`
   min-height: calc(100vh - 130px);
@@ -19,13 +21,17 @@ const EditorBody = styled(Body)`
 
 export default function Editor() {
   return (
-    <Container className={css`
-      min-height: 100vh;
-    `} padding="0">
+    <Container
+      className={css`
+        height: 100vh;
+      `}
+      padding="0"
+      margin="0"
+    >
       <Nav>
         <Heading>Editor</Heading>
 
-        <QuickAction>Preview</QuickAction>
+        <QuickAction> <Play/> Preview</QuickAction>
       </Nav>
 
       <EditorBody>
