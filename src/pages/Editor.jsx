@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { css, cx } from "@emotion/css";
 import Container from "../components/Container";
@@ -8,8 +8,8 @@ import Heading from "../components/Heading";
 import QuickAction from "../components/QuickAction";
 import QuoteInput from "../components/QuoteInput";
 import AuthorInput from "../components/AuthorInput";
-import { Link, Outlet } from "react-router-dom";
 import { Play } from "react-feather";
+import PreviewExport from "../components/PreviewExport";
 
 const EditorBody = styled(Body)`
   min-height: calc(100vh - 130px);
@@ -20,24 +20,35 @@ const EditorBody = styled(Body)`
 `;
 
 export default function Editor() {
+  const [previewOpen, setPreviewOpen] = useState(false);
+
+  window.onkeydown = (e) => {
+    String(e.key).toLocaleLowerCase() === "x" && setPreviewOpen(false);
+  }
+
   return (
     <Container
       className={css`
         height: 100vh;
       `}
       padding="0"
-      margin="0"
-    >
+      margin="0">
       <Nav>
         <Heading>Editor</Heading>
 
-        <QuickAction> <Play/> Preview</QuickAction>
+        <QuickAction action={() => setPreviewOpen(!previewOpen)}> <Play/> Preview</QuickAction>
       </Nav>
 
       <EditorBody>
         <QuoteInput margin="0" padding="0" />
         <AuthorInput margin="0" padding="0" />
       </EditorBody>
+
+      <PreviewExport active={previewOpen}>
+        <Heading>
+          A Preview of the Export Card
+        </Heading>
+      </PreviewExport>
     </Container>
   );
 }
