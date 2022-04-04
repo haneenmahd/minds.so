@@ -12,8 +12,8 @@ const Style = styled.div`
   top: -400%; left: 0%;
   height: auto; width: 80vmin;
   text-align: center;
-  padding: 30px 10px;
-  max-height: 80vh;
+  padding: 10px 10px;
+  max-height: 90vh;
   background-color: #fff;
   border: 0.7px solid #939393;
   border-radius: 8px;

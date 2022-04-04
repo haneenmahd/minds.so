@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import renderToImage from '../../utils/renderToImage';
 import Style, { QuoteImage } from './styles'
+import Button from "../Button";
+import { Download } from 'react-feather';
 
 export default function PreviewExport({
     active,
@@ -21,6 +23,11 @@ export default function PreviewExport({
     ReactDOM.createPortal(
         <Style active={active}>
           <QuoteImage src={imageData} />
+
+          <Button style={{
+            width: "100%"
+          }}>
+            <Download /> Download Image</Button>
         </Style>,
         document.getElementById("modal-root")
     )

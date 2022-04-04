@@ -21,10 +21,11 @@ const Style = styled.button`
 
   /* Optimisation for icons  */
   svg {
+    height: 20px; width: 20px;
     display: flex;
     align-items: center;
     justify-content: end;
-    margin: 0 5px;
+    margin: 0 10px;
   }
 
   &:hover {
