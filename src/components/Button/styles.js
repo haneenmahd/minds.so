@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Brown, BrownAccent } from "../../theme";
+import { Brown, BrownAccent, TransitionEase } from "../../theme";
 
 const Style = styled.button`
   display: flex;
@@ -17,7 +17,7 @@ const Style = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  transition: 0.24s;
+  transition: ${TransitionEase};
 
   /* Optimisation for icons  */
   svg {

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { TransitionEase } from "../../theme";
 
 const Style = styled.button`
   display: flex;
@@ -14,7 +15,7 @@ const Style = styled.button`
   outline: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: .25s;
+  transition: ${TransitionEase};
 
   &:hover {
       background-color: #e7e7e7;

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Brown } from "../../theme";
+import { Brown, TransitionEase } from "../../theme";
 
 const Style = styled.textarea`
   font-size: 4vmax;
@@ -13,7 +13,7 @@ const Style = styled.textarea`
   width: ${(p) => p.width};
   padding: ${(p) => p.padding};
   margin: ${(p) => p.margin};
-  transition: all 0.25s;
+  transition: ${TransitionEase};
   outline: none;
 
   &::placeholder {

@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { TransitionEase } from "../../theme";
 
 const Active = css`
   top: 50%;left: 50%;
@@ -16,9 +17,14 @@ const Style = styled.div`
   border: 0.7px solid #939393;
   border-radius: 8px;
   box-shadow: 0 20px 100vh 0 rgba(0, 0, 0, 0.38);
-  transition: 0.5s ease;
+  transition: ${TransitionEase};
 
   ${(p) => p.active && Active}
 `;
 
+const QuoteCanvas = styled.canvas`
+
+`;
+
+export { QuoteCanvas };
 export default Style;

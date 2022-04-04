@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Brown, BrownAccent } from "../../theme"
+import { Brown, BrownAccent, TransitionEase } from "../../theme"
 
 const Style = styled.input`
   min-height: 50px;
@@ -9,7 +9,7 @@ const Style = styled.input`
   font-size: ${p => p.size};
   border-radius: 8px;
   border: 1px solid ${Brown}90;
-  transition: all 0.25s;
+  transition: ${TransitionEase};
   outline: none;
 
   &:focus {
