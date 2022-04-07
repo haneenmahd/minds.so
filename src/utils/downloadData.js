@@ -1,5 +1,3 @@
-import jsDownload from "js-file-download";
-
 function downloadData(data, filename) {
     const link = document.createElement("a");
     link.download = filename;
