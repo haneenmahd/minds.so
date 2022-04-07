@@ -33,7 +33,7 @@ export default function Editor() {
 
   // Shortcut key to close the modal
   window.onkeydown = (e) => {
-    String(e.key).toLocaleLowerCase() === "x" && setPreviewOpen(!previewOpen);
+    String(e.key).toLocaleLowerCase() === "k" && setPreviewOpen(!previewOpen);
   };
 
   return (
