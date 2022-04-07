@@ -1,4 +1,4 @@
-export default illustration = () => {
+export default function Illustration() {
     return (
       <svg
         width="201"
