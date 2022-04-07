@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import { Skin, Text, TextBold } from "../theme";
-import Illustration from "../components/Illustration";
 
 function Home() {
   return (
@@ -25,10 +24,14 @@ function Home() {
         </Heading>
       </Container>
 
-      <img height={350} src={Illustration} alt="Main Illustration" />
-
       <Container spacing="5px" padding="0">
-        <Heading align="center" size="60px">Create beautiful images from your words</Heading>
+        <Heading align="center" size="80px">
+          📖
+        </Heading>
+
+        <Heading align="center" size="30px">
+          Create beautiful images from your words
+        </Heading>
 
         <Description>
           Present your quotes in a nice looking color and theme that makes them
