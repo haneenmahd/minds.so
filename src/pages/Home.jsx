@@ -20,7 +20,7 @@ function Home() {
     >
       <Container margin="0 0 40px 0" padding="0">
         <Heading color="#444" size="3vmax" weight="900">
-          Minds.so
+          🧘‍♀️ Minds.so
         </Heading>
       </Container>
 
