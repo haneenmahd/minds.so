@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import renderToImage from '../../utils/renderToImage';
 import Style, { QuoteImage } from './styles'
 import Button from "../Button";
-import { Download } from 'react-feather';
+import { Download as DownloadIcon } from 'react-feather';
+import downloadData from '../../utils/downloadData';
 
 export default function PreviewExport({
     active,
@@ -17,7 +18,7 @@ export default function PreviewExport({
     } catch (error) {
       console.error(error);
     }
-  })
+  });
 
   return ReactDOM.createPortal(
     <Style active={active}>
@@ -27,8 +28,10 @@ export default function PreviewExport({
         style={{
           width: "100%",
         }}
-      >
-        <Download /> Download Image
+        action={() => {
+          downloadData(imageData, "quote.png", "image/png");
+        }}>
+        <DownloadIcon /> Download Image
       </Button>
     </Style>,
     document.getElementById("modal-root")

@@ -8,7 +8,7 @@ import Heading from "../components/Heading";
 import QuickAction from "../components/QuickAction";
 import QuoteInput from "../components/QuoteInput";
 import AuthorInput from "../components/AuthorInput";
-import { Play } from "react-feather";
+import { Play as PlayIcon } from "react-feather";
 import PreviewExport from "../components/PreviewExport";
 
 const EditorBody = styled(Body)`
@@ -22,9 +22,10 @@ const EditorBody = styled(Body)`
 export default function Editor() {
   const [previewOpen, setPreviewOpen] = useState(false);
 
+  // Shortcut key to close the modal
   window.onkeydown = (e) => {
-    String(e.key).toLocaleLowerCase() === "x" && setPreviewOpen(false);
-  }
+    String(e.key).toLocaleLowerCase() === "x" && setPreviewOpen(!previewOpen);
+  };
 
   return (
     <Container
@@ -32,11 +33,14 @@ export default function Editor() {
         height: 100vh;
       `}
       padding="0"
-      margin="0">
+      margin="0"
+    >
       <Nav>
         <Heading>Editor</Heading>
 
-        <QuickAction action={() => setPreviewOpen(!previewOpen)}> <Play/> Preview</QuickAction>
+        <QuickAction action={() => setPreviewOpen(!previewOpen)}>
+          <PlayIcon /> {previewOpen ? "Close Preview" : "Preview"}
+        </QuickAction>
       </Nav>
 
       <EditorBody id="quote-input">
@@ -44,10 +48,11 @@ export default function Editor() {
         <AuthorInput margin="0" padding="0" />
       </EditorBody>
 
-      <PreviewExport targetRenderInputElement={document.getElementById("quote-input")} active={previewOpen}>
-        <Heading>
-          A Preview of the Export Card
-        </Heading>
+      <PreviewExport
+        targetRenderInputElement={document.getElementById("quote-input")}
+        active={previewOpen}
+      >
+        <Heading>A Preview of the Export Card</Heading>
       </PreviewExport>
     </Container>
   );

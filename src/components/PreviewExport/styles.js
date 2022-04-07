@@ -24,7 +24,7 @@ const Style = styled.div`
 `;
 
 const QuoteImage = styled.img`
-  max-height: 100%;
+  max-height: 100vh;
   max-width: 100%;
   border-radius: 10px;
 `;
