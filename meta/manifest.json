@@ -1,7 +1,6 @@
 {
     "name": "Minds.so",
     "short_name": "Minds.so",
-    "start_url": ".",
     "display": "minimal-ui",
     "icons": [
         {
