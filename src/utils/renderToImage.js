@@ -3,7 +3,7 @@ import { Skin } from "../theme";
 
 const renderToImage = async (targetRenderInputElement, cb) => {
   const renderedImage = await domToImage.toPng(targetRenderInputElement, {
-    quality: 1,
+    quality: 4.0,
     bgcolor: Skin,
   });
 

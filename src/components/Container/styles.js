@@ -10,10 +10,6 @@ const Style = styled.div`
     * {
         margin-bottom: ${p => p.spacing};
     }
-
-    @media screen and (min-width: 800px) {
-        justify-content: center;
-    }
 `;
 
 export default Style;

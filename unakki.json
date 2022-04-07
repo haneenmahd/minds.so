@@ -1,0 +1,7 @@
+[
+  {
+    "name": "ui",
+    "rootDir": "./src/components",
+    "files": [{ "name": "<name>/styles.js" }, { "name": "<name>/index.jsx" }]
+  }
+]
