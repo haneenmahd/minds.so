@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import { Skin, Text, TextBold } from "../theme";
-import Illustration from "../assets/illustration.svg";
+import Illustration from "../assets/illustration";
 
 function Home() {
   return (
