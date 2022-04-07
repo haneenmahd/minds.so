@@ -1,4 +1,5 @@
 import domToImage from "dom-to-image";
+import { Skin } from "../theme";
 
 const renderToImage = async (targetRenderInputElement, cb) => {
   const renderedImage = await domToImage.toPng(targetRenderInputElement, {

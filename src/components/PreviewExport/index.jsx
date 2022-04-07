@@ -19,17 +19,18 @@ export default function PreviewExport({
     }
   })
 
-  return (
-    ReactDOM.createPortal(
-        <Style active={active}>
-          <QuoteImage src={imageData} />
+  return ReactDOM.createPortal(
+    <Style active={active}>
+      <QuoteImage src={imageData} />
 
-          <Button style={{
-            width: "100%"
-          }}>
-            <Download /> Download Image</Button>
-        </Style>,
-        document.getElementById("modal-root")
-    )
-  )
+      <Button
+        style={{
+          width: "100%",
+        }}
+      >
+        <Download /> Download Image
+      </Button>
+    </Style>,
+    document.getElementById("modal-root")
+  );
 }

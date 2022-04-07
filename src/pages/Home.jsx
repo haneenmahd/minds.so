@@ -28,7 +28,7 @@ function Home() {
       <img height={350} src={Illustration} alt="Main Illustration" />
 
       <Container spacing="5px" padding="0">
-        <Heading size="25px">Create beautiful images from your words</Heading>
+        <Heading align="center" size="6vmax">Create beautiful images from your words</Heading>
 
         <Description>
           Present your quotes in a nice looking color and theme that makes them
