@@ -10,14 +10,23 @@ import QuoteInput from "../components/QuoteInput";
 import AuthorInput from "../components/AuthorInput";
 import { Play as PlayIcon } from "react-feather";
 import PreviewExport from "../components/PreviewExport";
+import AdditionalNote from "../components/AdditionalNote";
+
+const EditorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const EditorBody = styled(Body)`
-  min-height: calc(100vh - 130px);
+  min-height: calc(90vh - 130px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
+
 
 export default function Editor() {
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -43,10 +52,14 @@ export default function Editor() {
         </QuickAction>
       </Nav>
 
-      <EditorBody id="quote-input">
-        <QuoteInput margin="0" padding="0" />
-        <AuthorInput margin="0" padding="0" />
-      </EditorBody>
+      <EditorContainer>
+        <EditorBody id="quote-input">
+          <QuoteInput margin="0" padding="0" />
+          <AuthorInput margin="0" padding="0" />
+        </EditorBody>
+
+        <AdditionalNote note="Press K to toggle Preview" />
+      </EditorContainer>
 
       <PreviewExport
         targetRenderInputElement={document.getElementById("quote-input")}
